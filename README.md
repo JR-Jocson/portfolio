@@ -1,12 +1,38 @@
-# Astro Starter Kit: Minimal
+# John Rafael L. Jocson - Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+[![Deploy to GitHub Pages](https://github.com/JR-Jocson/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/JR-Jocson/portfolio/actions/workflows/deploy.yml)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> Professional portfolio website built with Astro and Tailwind CSS
 
-## 🚀 Project Structure
+## 🚀 Live Demo
+
+[View Live Demo](https://jr-jocson.github.io/portfolio/)
+
+## 🛠️ Local Development
+
+1. Clone the repository
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
+
+## 🚀 Deployment
+
+This project is set up to deploy automatically to GitHub Pages using GitHub Actions. To deploy your own copy:
+
+1. Create a new repository on GitHub named `portfolio` (or your preferred name)
+2. Update `astro.config.mjs` with your GitHub username and repository name
+3. Push your code to the `main` branch
+4. Go to your repository Settings > Pages
+5. Under "Build and deployment", select "GitHub Actions"
+6. The site will be deployed to `https://<your-username>.github.io/portfolio/`
+
+## 🏗️ Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
