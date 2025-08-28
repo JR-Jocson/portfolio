@@ -114,44 +114,6 @@ import { getAssetPath } from '../utils/paths.js';
             </a>
           </div>
 
-          <!-- Enhanced Tech Stack -->
-          <div class="pt-8">
-            <h4 class="text-hacker-green text-sm font-mono mb-4 uppercase tracking-wider">Tech Stack</h4>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-hacker-green/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">HTML5</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CSS</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">JavaScript</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Node.js</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-cyan-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">React</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-red-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-red-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Git</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Django</span>
-              </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-pink-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-pink-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">n8n</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Right Content - Profile Image -->
@@ -220,32 +182,97 @@ import { getAssetPath } from '../utils/paths.js';
 
         <!-- Right - About Me -->
         <div>
-          <h2 class="text-4xl font-bold text-white mb-6">About me</h2>
-          <p class="text-gray-300 mb-4 leading-relaxed">
-            I started my engineering journey with a passion for technology. Through my Computer Engineering degree, 
-            I learned to bridge the gap between hardware and software. Since graduating Cum Laude, this has led me to 
-            pursue innovative solutions that combine both worlds, fulfilling my love for learning and building things.
-          </p>
-          
-          <!-- Academic Achievements -->
-          <div class="bg-gray-800/50 p-4 rounded-lg border-l-2 border-hacker-green mb-8">
-            <h3 class="text-xl font-semibold text-white mb-2">Academic Achievements</h3>
-            <ul class="space-y-2 text-gray-300">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span>President's Lister at Mapua Malayan Colleges Laguna (2020-2023)</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span>Dean's Lister at Mapua Malayan Colleges Laguna (2020-2024)</span>
-              </li>
-            </ul>
+          <!-- Toggle Buttons -->
+          <div class="flex mb-6 border-b border-gray-700">
+            <button id="about-tab" class="px-4 py-2 text-white font-medium border-b-2 border-hacker-green mr-4 focus:outline-none">
+              About Me
+            </button>
+            <button id="tech-tab" class="px-4 py-2 text-gray-400 font-medium border-b-2 border-transparent hover:text-white focus:outline-none">
+              Tech Stack
+            </button>
           </div>
           
+          <!-- About Me Content -->
+          <div id="about-content" class="tab-content">
+            <p class="text-gray-300 mb-4 leading-relaxed">
+              I started my engineering journey with a passion for technology. Through my Computer Engineering degree, 
+              I learned to bridge the gap between hardware and software. Since graduating Cum Laude, this has led me to 
+              pursue innovative solutions that combine both worlds, fulfilling my love for learning and building things.
+            </p>
+            
+            <!-- Academic Achievements -->
+            <div class="bg-gray-800/50 p-4 rounded-lg border-l-2 border-hacker-green mb-8">
+              <h3 class="text-xl font-semibold text-white mb-2">Academic Achievements</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>President's Lister at Mapua Malayan Colleges Laguna (2020-2023)</span>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>Dean's Lister at Mapua Malayan Colleges Laguna (2020-2024)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Tech Stack Content -->
+          <div id="tech-content" class="tab-content hidden">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-hacker-green/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Python</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">C#</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Verilog</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">JavaScript</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-pink-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-pink-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">n8n</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Django</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Astro</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Tailwind</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">MySQL/PostgreSQL</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CompTIA ITF+</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-red-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-red-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Git</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">HTML5</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -686,6 +713,38 @@ import { getAssetPath } from '../utils/paths.js';
           }
         });
       });
+      
+      // About Me / Tech Stack tabs functionality
+      const aboutTab = document.getElementById('about-tab');
+      const techTab = document.getElementById('tech-tab');
+      const aboutContent = document.getElementById('about-content');
+      const techContent = document.getElementById('tech-content');
+      
+      if (aboutTab && techTab && aboutContent && techContent) {
+        aboutTab.addEventListener('click', function() {
+          // Update active tab styling
+          aboutTab.classList.add('text-white', 'border-hacker-green');
+          aboutTab.classList.remove('text-gray-400', 'border-transparent');
+          techTab.classList.add('text-gray-400', 'border-transparent');
+          techTab.classList.remove('text-white', 'border-hacker-green');
+          
+          // Show/hide content
+          aboutContent.classList.remove('hidden');
+          techContent.classList.add('hidden');
+        });
+        
+        techTab.addEventListener('click', function() {
+          // Update active tab styling
+          techTab.classList.add('text-white', 'border-hacker-green');
+          techTab.classList.remove('text-gray-400', 'border-transparent');
+          aboutTab.classList.add('text-gray-400', 'border-transparent');
+          aboutTab.classList.remove('text-white', 'border-hacker-green');
+          
+          // Show/hide content
+          techContent.classList.remove('hidden');
+          aboutContent.classList.add('hidden');
+        });
+      }
     });
   </script>
 </Layout>
