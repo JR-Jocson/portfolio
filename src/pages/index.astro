@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getAssetPath } from '../utils/paths.js';
 ---
 
 <Layout title="John Rafael L. Jocson | Portfolio">
@@ -26,16 +27,13 @@ import Layout from '../layouts/Layout.astro';
               <span class="text-hacker-green mr-1">02.</span> About
               <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-hacker-green group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#projects" class="relative group text-gray-300 hover:text-white transition-colors">
+            <a href="#publications" class="relative group text-gray-300 hover:text-white transition-colors">
               <span class="text-hacker-green mr-1">03.</span> Projects
               <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-hacker-green group-hover:w-full transition-all duration-300"></span>
             </a>
             <a href="#contact" class="relative group text-gray-300 hover:text-white transition-colors">
               <span class="text-hacker-green mr-1">04.</span> Contact
               <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-hacker-green group-hover:w-full transition-all duration-300"></span>
-            </a>
-            <a href="#resume" class="ml-4 px-4 py-2 border border-hacker-green text-hacker-green rounded hover:bg-hacker-green/10 transition-colors">
-              Resume
             </a>
           </div>
           
@@ -50,37 +48,154 @@ import Layout from '../layouts/Layout.astro';
     </header>
 
     <!-- Hero Section -->
-    <main class="container mx-auto px-6 lg:px-12 py-12">
-      <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+    <main id="about" class="container mx-auto px-6 lg:px-12 py-16 relative">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-2 h-2 bg-hacker-green rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-hacker-green rounded-full animate-pulse" style="animation-delay: 3s;"></div>
+        
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0 opacity-5">
+          <div class="grid grid-cols-12 gap-4 h-full">
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+            <div class="border-r border-hacker-green/20"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[85vh] relative z-10">
         <!-- Left Content -->
         <div class="space-y-8">
           <div>
-            <h1 class="text-5xl lg:text-7xl font-bold text-white mb-4">
-              Hello<span class="text-hacker-green">.</span>
+            <h1 class="text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+              Hello<span class="text-hacker-green animate-pulse">.</span>
             </h1>
-            <div class="h-1 w-24 bg-hacker-green mb-6"></div>
-            <h2 class="text-2xl lg:text-3xl text-gray-300 mb-2">I'm John Rafael</h2>
-            <h3 class="text-3xl lg:text-4xl font-bold text-white mb-8">Computer Engineer</h3>
+            <div class="h-2 w-32 bg-gradient-to-r from-hacker-green to-blue-400 mb-8 rounded-full"></div>
+            <h2 class="text-3xl lg:text-4xl text-gray-300 mb-3">I'm John Rafael</h2>
+            <h3 class="text-4xl lg:text-5xl font-bold mb-6">
+              <span class="text-hacker-green">Computer Engineer</span>
+            </h3>
+            <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+              Passionate about bridging hardware and software to create innovative solutions. 
+              Currently building automation systems and AI-powered applications.
+            </p>
           </div>
           
-          <div class="flex space-x-4">
-            <button class="border-2 border-white text-white px-6 py-3 rounded-md hover:bg-green-500 hover:border-green-500 hover:text-black transition-all duration-200 font-semibold">
-              Got a project?
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="group relative overflow-hidden border-2 border-green-500 text-green-500 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg">
+              <span class="absolute inset-0 bg-green-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+              <span class="relative flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                Contact Me
+              </span>
             </button>
-            <button class="border-2 border-white text-white px-6 py-3 rounded-md hover:bg-green-500 hover:border-green-500 hover:text-black transition-all duration-200">
-              My resume
-            </button>
+            <a href={getAssetPath('file/John Rafael Jocson CV.pdf')} download="John_Rafael_Jocson_CV.pdf" class="group relative overflow-hidden border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg inline-block">
+              <span class="absolute inset-0 bg-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+              <span class="relative flex items-center justify-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                My resume
+              </span>
+            </a>
           </div>
 
-          <!-- Tech Stack -->
-          <div class="flex flex-wrap gap-6 pt-8">
-            <span class="text-gray-500 text-sm">HTML5</span>
-            <span class="text-gray-500 text-sm">CSS</span>
-            <span class="text-gray-500 text-sm">JavaScript</span>
-            <span class="text-gray-500 text-sm">Node.js</span>
-            <span class="text-gray-500 text-sm">React</span>
-            <span class="text-gray-500 text-sm">Git</span>
-            <span class="text-gray-500 text-sm">GitHub</span>
+          <!-- Enhanced Tech Stack -->
+          <div class="pt-8">
+            <h4 class="text-hacker-green text-sm font-mono mb-4 uppercase tracking-wider">Tech Stack</h4>
+            
+            <!-- Languages -->
+            <h5 class="text-gray-300 text-xs font-mono mb-2 uppercase tracking-wider">Languages</h5>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Python</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">C#</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Verilog</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">JavaScript</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">HTML5</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CSS</span>
+              </div>
+            </div>
+            
+            <!-- Frameworks & Tools -->
+            <h5 class="text-gray-300 text-xs font-mono mb-2 uppercase tracking-wider">Frameworks & Tools</h5>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Django</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-pink-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-pink-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">n8n</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-indigo-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Astro</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Tailwind</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-red-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-red-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Git</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Node.js</span>
+              </div>
+            </div>
+            
+            <!-- Databases & Infrastructure -->
+            <h5 class="text-gray-300 text-xs font-mono mb-2 uppercase tracking-wider">Databases & Infrastructure</h5>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">MySQL</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-indigo-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-indigo-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">PostgreSQL</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Vector DB</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CompTIA ITF+</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -97,7 +212,7 @@ import Layout from '../layouts/Layout.astro';
               <div class="absolute inset-4 bg-gradient-to-br from-hacker-green/30 to-transparent rounded-full"></div>
               <div class="absolute inset-8 rounded-full overflow-hidden profile-glow">
                 <img 
-                  src="/images/Portfolio Pic.png" 
+                  src={getAssetPath('profile-picture.png')} 
                   alt="John Rafael L. Jocson" 
                   class="w-full h-full object-cover"
                 />
@@ -151,33 +266,207 @@ import Layout from '../layouts/Layout.astro';
         <!-- Right - About Me -->
         <div>
           <h2 class="text-4xl font-bold text-white mb-6">About me</h2>
-          <p class="text-gray-300 mb-8 leading-relaxed">
+          <p class="text-gray-300 mb-4 leading-relaxed">
             I started my engineering journey with a passion for technology. Through my Computer Engineering degree, 
             I learned to bridge the gap between hardware and software. Since graduating Cum Laude, this has led me to 
             pursue innovative solutions that combine both worlds, fulfilling my love for learning and building things.
           </p>
           
-          <!-- Stats -->
-          <div class="grid grid-cols-3 gap-6">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-white mb-2">
-                15<span class="text-hacker-green">+</span>
+          <!-- Academic Achievements -->
+          <div class="bg-gray-800/50 p-4 rounded-lg border-l-2 border-hacker-green mb-8">
+            <h3 class="text-xl font-semibold text-white mb-2">Academic Achievements</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>President's Lister at Mapua Malayan Colleges Laguna (2020-2023)</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-hacker-green mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Dean's Lister at Mapua Malayan Colleges Laguna (2020-2024)</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-16 mt-16 border-t border-gray-800/30">
+        <div class="container mx-auto px-6 lg:px-12">
+          <h2 class="text-3xl font-bold text-white mb-8">Work Experience</h2>
+          
+          <!-- Timeline container -->
+          <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-hacker-green/80 via-hacker-green/50 to-transparent"></div>
+            
+            <!-- Experience Item 1 - Playbook Sports -->
+            <div class="relative mb-12">
+              <div class="flex flex-col md:flex-row items-start">
+                <!-- Date for mobile (left side) -->
+                <div class="md:hidden mb-4 px-4 py-1 bg-gray-800/70 rounded-full text-hacker-green text-sm font-mono">
+                  Jan 2025 - Current
+                </div>
+                
+                <!-- Left column (hidden on mobile) -->
+                <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                  <div class="px-4 py-1 inline-block bg-gray-800/70 rounded-full text-hacker-green text-sm font-mono">
+                    Jan 2025 - Current
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-hacker-green rounded-full border-4 border-gray-900 glow-dot"></div>
+                
+                <!-- Right column -->
+                <div class="pl-8 md:pl-12 md:w-1/2">
+                  <div class="p-5 bg-gray-800/50 rounded-lg border-l-2 border-hacker-green hover:bg-gray-800/70 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-1">Associate Developer</h3>
+                    <h4 class="text-hacker-green mb-1">Playbook Sports</h4>
+                    <p class="text-gray-400 text-sm mb-3">Hoboken, NJ (Remote)</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">n8n</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Django</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">AI/LLM</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">RAG</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Vector DB</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Automation</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Create internal automation solutions and external webapps using n8n to provide AI/LLM functions to most apps</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Used Django framework to handle a client's request for a standalone scheduler/drafter synced to our base SAAS</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Made lead generation that runs constantly in the background using n8n to prospect for potential B2B customers</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Built backend for software wide chatbot made with RAG agent and Vector store database to retrieve FAQs</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="text-gray-400 text-sm">Projects<br>Completed</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-white mb-2">
-                95<span class="text-hacker-green">%</span>
+            
+            <!-- Experience Item 2 - Pixel8 Web Solutions -->
+            <div class="relative mb-12">
+              <div class="flex flex-col md:flex-row items-start">
+                <!-- Date for mobile (left side) -->
+                <div class="md:hidden mb-4 px-4 py-1 bg-gray-800/70 rounded-full text-blue-400 text-sm font-mono">
+                  2024
+                </div>
+                
+                <!-- Right column (on desktop) -->
+                <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                  <div class="p-5 bg-gray-800/50 rounded-lg border-r-2 border-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-1">Backend Development Intern</h3>
+                    <h4 class="text-blue-400 mb-1">Pixel8 Web Solutions and Consultancy</h4>
+                    <p class="text-gray-400 text-sm mb-3">Remote</p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-end">
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Django</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Laravel</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Ruby on Rails</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">REST API</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Project Management</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                      <li class="flex items-start justify-end">
+                        <span>Developing backend systems using REST API on different web frameworks (Django, Laravel, Ruby on Rails)</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                      <li class="flex items-start justify-end">
+                        <span>Created backend API for projects such as To-Do list, Login/Authentication and remade it on different frameworks</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                      <li class="flex items-start justify-end">
+                        <span>Become team leader for fellow interns during my stay and acted as project manager for the team</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 glow-dot"></div>
+                
+                <!-- Left column (on mobile) -->
+                <div class="pl-8 md:hidden">
+                  <div class="p-5 bg-gray-800/50 rounded-lg border-l-2 border-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-1">Backend Development Intern</h3>
+                    <h4 class="text-blue-400 mb-1">Pixel8 Web Solutions and Consultancy</h4>
+                    <p class="text-gray-400 text-sm mb-3">Remote</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Django</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Laravel</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Ruby on Rails</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">REST API</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Project Management</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Developing backend systems using REST API on different web frameworks (Django, Laravel, Ruby on Rails)</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Created backend API for projects such as To-Do list, Login/Authentication and remade it on different frameworks</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Become team leader for fellow interns during my stay and acted as project manager for the team</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Date (right side) -->
+                <div class="hidden md:block md:w-1/2 pl-12">
+                  <div class="px-4 py-1 inline-block bg-gray-800/70 rounded-full text-blue-400 text-sm font-mono">
+                    2024
+                  </div>
+                </div>
               </div>
-              <div class="text-gray-400 text-sm">Client<br>Satisfaction</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-white mb-2">
-                4<span class="text-hacker-green">+</span>
-              </div>
-              <div class="text-gray-400 text-sm">Years of<br>Experience</div>
             </div>
           </div>
+        </div>
+      </section>
+      
+      <!-- Projects Section -->
+      <section id="projects" class="py-16 mt-16">
+        <div class="container mx-auto px-6 lg:px-12">
+          <h2 class="text-3xl font-bold text-white mb-8">Projects</h2>
+          <p class="text-gray-400 mb-8">Coming soon - showcasing my latest work and innovations.</p>
         </div>
       </section>
 
@@ -196,18 +485,20 @@ import Layout from '../layouts/Layout.astro';
           
           <!-- Publications Grid -->
           <div class="grid md:grid-cols-2 gap-6" id="publications-grid">
-            <!-- Plant Disease Classification Paper -->
+            <!-- Leaf Disease Detection Paper -->
             <div class="publication-card group" data-category="conference">
               <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-green-500 hover:border-green-400 transition-all duration-300 cursor-pointer" data-publication="1">
                 <div class="flex justify-between items-start mb-4">
-                  <span class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">Conference Paper</span>
-                  <span class="text-gray-400 text-sm">2025</span>
+                  <span class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">ICCAE Conference</span>
+                  <span class="text-gray-400 text-sm">March 20-22, 2025</span>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Image Classification Model for Data Sentry of Plant Diseases Using Convolutional Neural Networks</h3>
-                <p class="text-gray-300 mb-4">A novel approach to plant disease detection using deep learning for agricultural applications.</p>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Leaf Disease Detection with CNN and Data Center Management</h3>
+                <p class="text-gray-300 mb-4">Leaf disease detection using an Image classification convolutional neural network model with Django dashboard and Raspberry Pi integration.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Computer Vision</span>
-                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Deep Learning</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">CNN</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">IoT</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Django</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Raspberry Pi</span>
                   <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Agriculture</span>
                 </div>
                 <div class="publication-details hidden mt-4 pt-4 border-t border-gray-700">
@@ -232,19 +523,20 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </div>
 
-            <!-- Single Cycle Datapath Paper -->
+            <!-- RISC-V FPGA Implementation Paper -->
             <div class="publication-card" data-category="conference">
               <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-blue-500 hover:border-blue-400 transition-all duration-300 cursor-pointer" data-publication="2">
                 <div class="flex justify-between items-start mb-4">
-                  <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full">Conference Paper</span>
-                  <span class="text-gray-400 text-sm">2024</span>
+                  <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full">ICCAE Conference</span>
+                  <span class="text-gray-400 text-sm">March 14-16, 2024</span>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Implementation of a Single Cycle Datapath for the Design of a Low-process Control in XC3S500E</h3>
-                <p class="text-gray-300 mb-4">Design and implementation of an efficient single-cycle datapath for low-power processing applications.</p>
+                <p class="text-gray-300 mb-4">A Proof of concept in running a RISC-V Architecture on an FPGA board for low-process control using Verilog.</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Computer Architecture</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">RISC-V</span>
                   <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">FPGA</span>
-                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Low-power Design</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Verilog</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">XC3S500E</span>
                 </div>
                 <div class="publication-details hidden mt-4 pt-4 border-t border-gray-700">
                   <p class="text-gray-300 mb-3"><span class="font-medium text-white">Presented at:</span> 2024 16th International Conference on Computer and Automation Engineering (ICCAE)</p>
@@ -260,6 +552,37 @@ import Layout from '../layouts/Layout.astro';
                   </a>
                 </div>
                 <button class="mt-3 text-sm text-blue-400 hover:text-blue-300 flex items-center focus:outline-none">
+                  <span class="mr-1">Show details</span>
+                  <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- IoT Germination Control System Thesis -->
+            <div class="publication-card group" data-category="journal">
+              <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-purple-500 hover:border-purple-400 transition-all duration-300 cursor-pointer" data-publication="3">
+                <div class="flex justify-between items-start mb-4">
+                  <span class="bg-purple-500/20 text-purple-400 text-xs px-3 py-1 rounded-full">Thesis</span>
+                  <span class="text-gray-400 text-sm">2024</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">IoT-Based Monitoring Control System for Increase in Seed Germination Rate of Plants</h3>
+                <p class="text-gray-300 mb-4">Automated moisture, humidity, light, and temperature control using Arduino sensors to facilitate germination with ESP32 network operations.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">IoT</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Arduino</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">ESP32</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Sensors</span>
+                  <span class="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">Agriculture</span>
+                </div>
+                <div class="publication-details hidden mt-4 pt-4 border-t border-gray-700">
+                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Institution:</span> Mapua Malayan Colleges Laguna</p>
+                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Program:</span> Bachelor of Science in Computer Engineering</p>
+                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Year:</span> 2024</p>
+                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Role:</span> Co-Developer (Sensor Control & Web Server)</p>
+                </div>
+                <button class="mt-3 text-sm text-purple-400 hover:text-purple-300 flex items-center focus:outline-none">
                   <span class="mr-1">Show details</span>
                   <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -377,6 +700,36 @@ import Layout from '../layouts/Layout.astro';
         } else {
           button.innerHTML = '<span class="mr-1">Hide details</span>' + icon.outerHTML.replace('M19 9l-7 7-7-7', 'M5 15l7-7 7 7');
         }
+      });
+    });
+  </script>
+
+  <!-- Smooth Scrolling Script -->
+  <script>
+    // Add smooth scrolling behavior to all navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add smooth scrolling CSS
+      document.documentElement.style.scrollBehavior = 'smooth';
+      
+      // Get all navigation links
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 80; // Account for fixed header
+            
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

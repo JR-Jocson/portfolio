@@ -8,7 +8,8 @@ export default defineConfig({
   base: '/portfolio',
   output: 'static',
   build: {
-    format: 'directory'
+    format: 'directory',
+    assets: '_assets'
   },
   vite: {
     plugins: [tailwindcss()]
