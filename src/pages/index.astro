@@ -81,21 +81,21 @@ import { getAssetPath } from '../utils/paths.js';
         <div class="space-y-8">
           <div>
             <h1 class="text-6xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-              Hello<span class="text-hacker-green animate-pulse">.</span>
+              <span id="typing-target" class="typing-effect" data-text="Hello."></span>
             </h1>
-            <div class="h-2 w-32 bg-gradient-to-r from-hacker-green to-blue-400 mb-8 rounded-full"></div>
-            <h2 class="text-3xl lg:text-4xl text-gray-300 mb-3">I'm John Rafael</h2>
-            <h3 class="text-4xl lg:text-5xl font-bold mb-6">
+            <div class="h-2 bg-gradient-to-r from-hacker-green to-blue-400 mb-8 rounded-full animate-on-load animate-width-grow" style="--delay:600ms"></div>
+            <h2 class="text-3xl lg:text-4xl text-gray-300 mb-3 animate-on-load animate-fade-up" style="--delay:800ms">I'm John Rafael</h2>
+            <h3 class="text-4xl lg:text-5xl font-bold mb-6 animate-on-load animate-fade-up" style="--delay:1000ms">
               <span class="text-hacker-green">Computer Engineer</span>
             </h3>
-            <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+            <p class="text-lg text-gray-400 max-w-lg leading-relaxed animate-on-load animate-fade-up" style="--delay:1200ms">
               Passionate about bridging hardware and software to create innovative solutions. 
-              Currently building automation systems and AI-powered applications.
+              Currently building AI automations and fullstack applications at Tauga AI.
             </p>
           </div>
           
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="mailto:johnrafaeljocsonbsn@gmail.com" class="group relative overflow-hidden border-2 border-green-500 text-green-500 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg inline-block">
+            <a href="mailto:johnrafaeljocsonbsn@gmail.com" class="group relative overflow-hidden border-2 border-green-500 text-green-500 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg inline-block animate-on-load animate-fade-up" style="--delay:1400ms">
               <span class="absolute inset-0 bg-green-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
               <span class="relative flex items-center justify-center">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ import { getAssetPath } from '../utils/paths.js';
                 Contact Me
               </span>
             </a>
-            <a href={getAssetPath('file/John Rafael Jocson CV.pdf')} download="John_Rafael_Jocson_CV.pdf" class="group relative overflow-hidden border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg inline-block">
+            <a href={getAssetPath('file/John Rafael Jocson CV.pdf')} download="John_Rafael_Jocson_CV.pdf" class="group relative overflow-hidden border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:text-black transition-all duration-300 text-lg inline-block animate-on-load animate-fade-up" style="--delay:1550ms">
               <span class="absolute inset-0 bg-blue-400 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
               <span class="relative flex items-center justify-center">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,10 +119,10 @@ import { getAssetPath } from '../utils/paths.js';
 
         <!-- Right Content - Profile Image -->
         <div class="flex justify-center lg:justify-end relative">
-          <div class="relative">
+          <div class="relative animate-on-load animate-scale-in" style="--delay:600ms">
             <!-- Decorative elements -->
-            <div class="absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-hacker-green"></div>
-            <div class="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-hacker-green"></div>
+            <div class="absolute -top-4 -left-4 w-8 h-8 border-l-2 border-t-2 border-hacker-green animate-on-load animate-fade-up" style="--delay:900ms"></div>
+            <div class="absolute -bottom-4 -right-4 w-8 h-8 border-r-2 border-b-2 border-hacker-green animate-on-load animate-fade-up" style="--delay:1000ms"></div>
             
             <!-- Profile circle with gradient background -->
             <div class="relative w-80 h-80 lg:w-96 lg:h-96">
@@ -144,7 +144,7 @@ import { getAssetPath } from '../utils/paths.js';
       <section class="mt-24 grid md:grid-cols-2 gap-12">
         <!-- Left - Services -->
         <div class="space-y-8">
-          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green">
+          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green animate-on-scroll animate-slide-left" style="--delay:0ms">
             <div class="w-12 h-12 bg-hacker-green/20 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-hacker-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
@@ -156,7 +156,7 @@ import { getAssetPath } from '../utils/paths.js';
             </div>
           </div>
 
-          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green">
+          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green animate-on-scroll animate-slide-left" style="--delay:150ms">
             <div class="w-12 h-12 bg-hacker-green/20 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-hacker-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -168,7 +168,7 @@ import { getAssetPath } from '../utils/paths.js';
             </div>
           </div>
 
-          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green">
+          <div class="flex items-center space-x-4 p-6 bg-gray-800/50 rounded-lg border-l-4 border-hacker-green animate-on-scroll animate-slide-left" style="--delay:300ms">
             <div class="w-12 h-12 bg-hacker-green/20 rounded-lg flex items-center justify-center">
               <svg class="w-6 h-6 text-hacker-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -182,7 +182,7 @@ import { getAssetPath } from '../utils/paths.js';
         </div>
 
         <!-- Right - About Me -->
-        <div>
+        <div class="animate-on-scroll animate-fade-up">
           <!-- Toggle Buttons -->
           <div class="flex mb-6 border-b border-gray-700">
             <button id="about-tab" class="px-4 py-2 text-white font-medium border-b-2 border-hacker-green mr-4 focus:outline-none">
@@ -234,21 +234,33 @@ import { getAssetPath } from '../utils/paths.js';
                 <div class="w-2 h-2 bg-blue-500 rounded-full group-hover:animate-pulse"></div>
                 <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Python</span>
               </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">JavaScript</span>
+              </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
                 <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">C#</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-red-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-red-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Java</span>
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
                 <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Verilog</span>
               </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-yellow-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">JavaScript</span>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-gray-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-gray-400 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Bash</span>
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-pink-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-pink-500 rounded-full group-hover:animate-pulse"></div>
                 <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">n8n</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-white/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-white rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Next.js</span>
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-purple-500 rounded-full group-hover:animate-pulse"></div>
@@ -264,19 +276,31 @@ import { getAssetPath } from '../utils/paths.js';
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">MySQL/PostgreSQL</span>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">AWS</span>
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CompTIA ITF+</span>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Supabase</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-blue-400 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Vercel</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">MySQL/PostgreSQL</span>
               </div>
               <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-red-400/50 transition-all duration-300">
                 <div class="w-2 h-2 bg-red-500 rounded-full group-hover:animate-pulse"></div>
                 <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">Git</span>
               </div>
-              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300">
-                <div class="w-2 h-2 bg-orange-500 rounded-full group-hover:animate-pulse"></div>
-                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">HTML5</span>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-green-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">CompTIA ITF+</span>
+              </div>
+              <div class="group flex items-center space-x-2 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                <div class="w-2 h-2 bg-cyan-500 rounded-full group-hover:animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-mono group-hover:text-white transition-colors">GCP</span>
               </div>
             </div>
           </div>
@@ -286,69 +310,69 @@ import { getAssetPath } from '../utils/paths.js';
       <!-- Experience Section -->
       <section id="experience" class="py-16 mt-16 border-t border-gray-800/30">
         <div class="container mx-auto px-6 lg:px-12">
-          <h2 class="text-3xl font-bold text-white mb-8">Work Experience</h2>
+          <h2 class="text-3xl font-bold text-white mb-8 animate-on-scroll animate-fade-up">Work Experience</h2>
           
           <!-- Timeline container -->
           <div class="relative">
             <!-- Timeline line -->
-            <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-hacker-green/80 via-hacker-green/50 to-transparent"></div>
+            <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-hacker-green/80 via-hacker-green/50 to-transparent animate-on-scroll animate-draw-down" style="--delay:200ms"></div>
             
-            <!-- Experience Item 1 - Playbook Sports -->
-            <div class="relative mb-12">
+            <!-- Experience Item 1 - Tauga AI -->
+            <div class="relative mb-12 animate-on-scroll animate-slide-right" style="--delay:300ms">
               <div class="flex flex-col md:flex-row items-start">
                 <!-- Date for mobile (left side) -->
                 <div class="md:hidden mb-4 px-4 py-1 bg-gray-800/70 rounded-full text-hacker-green text-sm font-mono">
-                  Dec 2024 - Current
+                  2025 - Current
                 </div>
                 
                 <!-- Left column (hidden on mobile) -->
                 <div class="hidden md:block md:w-1/2 pr-12 text-right">
                   <div class="px-4 py-1 inline-block bg-gray-800/70 rounded-full text-hacker-green text-sm font-mono">
-                    Dec 2024 - Current
+                    2025 - Current
                   </div>
                 </div>
                 
                 <!-- Timeline dot -->
-                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-hacker-green rounded-full border-4 border-gray-900 glow-dot"></div>
+                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-hacker-green rounded-full border-4 border-gray-900 glow-dot animate-on-scroll animate-pop" style="--delay:400ms"></div>
                 
                 <!-- Right column -->
                 <div class="pl-8 md:pl-12 md:w-1/2">
                   <div class="p-5 bg-gray-800/50 rounded-lg border-l-2 border-hacker-green hover:bg-gray-800/70 transition-all duration-300">
-                    <h3 class="text-xl font-bold text-white mb-1">Associate Developer</h3>
-                    <h4 class="text-hacker-green mb-1">Playbook Sports</h4>
-                    <p class="text-gray-400 text-sm mb-3">Hoboken, NJ (Remote)</p>
+                    <h3 class="text-xl font-bold text-white mb-1">n8n Automation Specialist / Fullstack Dev</h3>
+                    <h4 class="text-hacker-green mb-1">Tauga AI</h4>
+                    <p class="text-gray-400 text-sm mb-3">Tel Aviv, Israel (Remote)</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                       <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">n8n</span>
-                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Django</span>
-                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">AI/LLM</span>
-                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">RAG</span>
-                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Vector DB</span>
-                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Automation</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Next.js</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">AWS</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Supabase</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">Vercel</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-hacker-green border border-hacker-green/30">AI Automation</span>
                     </div>
                     <ul class="space-y-2 text-gray-300">
                       <li class="flex items-start">
                         <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                        <span>Create internal automation solutions and external webapps using n8n to provide AI/LLM functions to most apps</span>
+                        <span>Create automations for Tauga's clients both B2B and B2G and provide production ready AI automations</span>
                       </li>
                       <li class="flex items-start">
                         <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                        <span>Used Django framework to handle a client's request for a standalone scheduler/drafter synced to our base SAAS</span>
+                        <span>Became lead developer for Tauga's main educational app (Next.js) and handled live on production code</span>
                       </li>
                       <li class="flex items-start">
                         <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                        <span>Made lead generation that runs constantly in the background using n8n to prospect for potential B2B customers</span>
+                        <span>Manage domains on each project in AWS and setup SMTP for automated email sending for each website</span>
                       </li>
                       <li class="flex items-start">
                         <svg class="w-4 h-4 text-hacker-green mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                         </svg>
-                        <span>Built backend for software wide chatbot made with RAG agent and Vector store database to retrieve FAQs</span>
+                        <span>Used AI powered IDEs like Cursor to create frontend designs for web pages with n8n integration in the backend</span>
                       </li>
                     </ul>
                   </div>
@@ -356,8 +380,112 @@ import { getAssetPath } from '../utils/paths.js';
               </div>
             </div>
             
-            <!-- Experience Item 2 - Pixel8 Web Solutions -->
-            <div class="relative mb-12">
+            <!-- Experience Item 2 - Playbook Sports -->
+            <div class="relative mb-12 animate-on-scroll animate-slide-left" style="--delay:200ms">
+              <div class="flex flex-col md:flex-row items-start">
+                <!-- Date for mobile (left side) -->
+                <div class="md:hidden mb-4 px-4 py-1 bg-gray-800/70 rounded-full text-blue-400 text-sm font-mono">
+                  2024 - 2025
+                </div>
+                
+                <!-- Right column (on desktop) -->
+                <div class="hidden md:block md:w-1/2 pr-12 text-right">
+                  <div class="p-5 bg-gray-800/50 rounded-lg border-r-2 border-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-1">Associate Developer</h3>
+                    <h4 class="text-blue-400 mb-1">Playbook Sports</h4>
+                    <p class="text-gray-400 text-sm mb-3">Hoboken, NJ (Remote)</p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-end">
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">n8n</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Django</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">AI/LLM</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">RAG</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Vector DB</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                      <li class="flex items-start justify-end">
+                        <span>Create internal automation solutions and external webapps using n8n to provide AI/LLM functions to most apps</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                      <li class="flex items-start justify-end">
+                        <span>Used Django framework to handle a client's request for a standalone scheduler/drafter synced to our base SAAS</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                      <li class="flex items-start justify-end">
+                        <span>Made lead generation that runs constantly in the background using n8n to prospect for potential B2B customers</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                      <li class="flex items-start justify-end">
+                        <span>Built backend for software wide chatbot made with RAG agent and Vector store database to retrieve FAQs</span>
+                        <svg class="w-4 h-4 text-blue-400 ml-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Timeline dot -->
+                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 glow-dot animate-on-scroll animate-pop" style="--delay:300ms"></div>
+                
+                <!-- Left column (on mobile) -->
+                <div class="pl-8 md:hidden">
+                  <div class="p-5 bg-gray-800/50 rounded-lg border-l-2 border-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                    <h3 class="text-xl font-bold text-white mb-1">Associate Developer</h3>
+                    <h4 class="text-blue-400 mb-1">Playbook Sports</h4>
+                    <p class="text-gray-400 text-sm mb-3">Hoboken, NJ (Remote)</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">n8n</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Django</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">AI/LLM</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">RAG</span>
+                      <span class="px-2 py-1 bg-gray-700/70 rounded text-xs font-mono text-blue-400 border border-blue-400/30">Vector DB</span>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Create internal automation solutions and external webapps using n8n to provide AI/LLM functions to most apps</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Used Django framework to handle a client's request for a standalone scheduler/drafter synced to our base SAAS</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Made lead generation that runs constantly in the background using n8n to prospect for potential B2B customers</span>
+                      </li>
+                      <li class="flex items-start">
+                        <svg class="w-4 h-4 text-blue-400 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                        <span>Built backend for software wide chatbot made with RAG agent and Vector store database to retrieve FAQs</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Date (right side) -->
+                <div class="hidden md:block md:w-1/2 pl-12">
+                  <div class="px-4 py-1 inline-block bg-gray-800/70 rounded-full text-blue-400 text-sm font-mono">
+                    2024 - 2025
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Experience Item 3 - Pixel8 Web Solutions -->
+            <div class="relative mb-12 animate-on-scroll animate-slide-left" style="--delay:200ms">
               <div class="flex flex-col md:flex-row items-start">
                 <!-- Date for mobile (left side) -->
                 <div class="md:hidden mb-4 px-4 py-1 bg-gray-800/70 rounded-full text-blue-400 text-sm font-mono">
@@ -401,7 +529,7 @@ import { getAssetPath } from '../utils/paths.js';
                 </div>
                 
                 <!-- Timeline dot -->
-                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 glow-dot"></div>
+                <div class="absolute left-[-8px] md:left-1/2 md:ml-[-8px] w-4 h-4 bg-blue-400 rounded-full border-4 border-gray-900 glow-dot animate-on-scroll animate-pop" style="--delay:300ms"></div>
                 
                 <!-- Left column (on mobile) -->
                 <div class="pl-8 md:hidden">
@@ -454,18 +582,18 @@ import { getAssetPath } from '../utils/paths.js';
       <!-- Projects Section -->
       <section id="projects" class="py-16 mt-16">
         <div class="container mx-auto px-6 lg:px-12">
-          <h2 class="text-3xl font-bold text-white mb-8">Projects</h2>
-          <p class="text-gray-400 mb-8">Coming soon - showcasing my latest work and innovations.</p>
+          <h2 class="text-3xl font-bold text-white mb-8 animate-on-scroll animate-fade-up">Projects</h2>
+          <p class="text-gray-400 mb-8 animate-on-scroll animate-fade-up" style="--delay:100ms">Coming soon - showcasing my latest work and innovations.</p>
         </div>
       </section>
 
       <!-- Publications Section -->
       <section id="publications" class="py-16 bg-gray-900/50 mt-16">
         <div class="container mx-auto px-6 lg:px-12">
-          <h2 class="text-3xl font-bold text-white mb-8">Publications</h2>
+          <h2 class="text-3xl font-bold text-white mb-8 animate-on-scroll animate-fade-up">Publications</h2>
           
           <!-- Filter Buttons -->
-          <div class="flex flex-wrap gap-3 mb-8" id="publication-filters">
+          <div class="flex flex-wrap gap-3 mb-8 animate-on-scroll animate-fade-up" style="--delay:100ms" id="publication-filters">
             <button class="px-4 py-2 rounded-md border-2 border-white text-white hover:bg-white hover:text-black transition-colors" data-filter="all">All</button>
             <button class="px-4 py-2 rounded-md border-2 border-white text-white hover:bg-white hover:text-black transition-colors" data-filter="journal">Journal Articles</button>
             <button class="px-4 py-2 rounded-md border-2 border-white text-white hover:bg-white hover:text-black transition-colors" data-filter="conference">Conference Papers</button>
@@ -475,7 +603,7 @@ import { getAssetPath } from '../utils/paths.js';
           <!-- Publications Grid -->
           <div class="grid md:grid-cols-2 gap-6" id="publications-grid">
             <!-- Leaf Disease Detection Paper -->
-            <div class="publication-card group" data-category="conference">
+            <div class="publication-card group animate-on-scroll animate-fade-up" style="--delay:200ms" data-category="conference">
               <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-green-500 hover:border-green-400 transition-all duration-300 cursor-pointer" data-publication="1">
                 <div class="flex justify-between items-start mb-4">
                   <span class="bg-green-500/20 text-green-400 text-xs px-3 py-1 rounded-full">ICCAE Conference</span>
@@ -495,7 +623,7 @@ import { getAssetPath } from '../utils/paths.js';
                   <p class="text-gray-300 mb-3"><span class="font-medium text-white">Location:</span> Perth, Australia</p>
                   <p class="text-gray-300 mb-3"><span class="font-medium text-white">Date:</span> March 20-22, 2025</p>
                   <p class="text-gray-300 mb-3"><span class="font-medium text-white">DOI:</span> 10.1109/ICCAE64891.2025.10980545</p>
-                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Role:</span> Main Developer</p>
+                  <p class="text-gray-300 mb-3"><span class="font-medium text-white">Role:</span> Sole Developer</p>
                   <a href="https://ieeexplore.ieee.org/document/10980545" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-green-400 hover:text-green-300 transition-colors">
                     View on IEEE Xplore
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -513,7 +641,7 @@ import { getAssetPath } from '../utils/paths.js';
             </div>
 
             <!-- RISC-V FPGA Implementation Paper -->
-            <div class="publication-card" data-category="conference">
+            <div class="publication-card animate-on-scroll animate-fade-up" style="--delay:350ms" data-category="conference">
               <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-blue-500 hover:border-blue-400 transition-all duration-300 cursor-pointer" data-publication="2">
                 <div class="flex justify-between items-start mb-4">
                   <span class="bg-blue-500/20 text-blue-400 text-xs px-3 py-1 rounded-full">ICCAE Conference</span>
@@ -550,7 +678,7 @@ import { getAssetPath } from '../utils/paths.js';
             </div>
 
             <!-- IoT Germination Control System Thesis -->
-            <div class="publication-card group" data-category="journal">
+            <div class="publication-card group animate-on-scroll animate-fade-up" style="--delay:500ms" data-category="journal">
               <div class="bg-gray-800/50 rounded-lg p-6 h-full border-l-4 border-purple-500 hover:border-purple-400 transition-all duration-300 cursor-pointer" data-publication="3">
                 <div class="flex justify-between items-start mb-4">
                   <span class="bg-purple-500/20 text-purple-400 text-xs px-3 py-1 rounded-full">Thesis</span>
@@ -589,22 +717,22 @@ import { getAssetPath } from '../utils/paths.js';
       <div class="container mx-auto px-6 lg:px-12">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-6 md:mb-0">
-            <h2 class="text-2xl font-bold text-white mb-3">Contact Me</h2>
-            <p class="text-gray-400 mb-4">Let's connect and build something amazing together</p>
+            <h2 class="text-2xl font-bold text-white mb-3 animate-on-scroll animate-fade-up">Contact Me</h2>
+            <p class="text-gray-400 mb-4 animate-on-scroll animate-fade-up" style="--delay:100ms">Let's connect and build something amazing together</p>
             <div class="flex flex-col space-y-2">
-              <a href="mailto:johnrafaeljocsonbsn@gmail.com" class="flex items-center text-gray-300 hover:text-green-400 transition-colors">
+              <a href="mailto:johnrafaeljocsonbsn@gmail.com" class="flex items-center text-gray-300 hover:text-green-400 transition-colors animate-on-scroll animate-fade-up" style="--delay:200ms">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 johnrafaeljocsonbsn@gmail.com
               </a>
-              <a href="https://www.linkedin.com/in/john-rafael-jocson-67512a275" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-green-400 transition-colors">
+              <a href="https://www.linkedin.com/in/john-rafael-jocson-67512a275" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-green-400 transition-colors animate-on-scroll animate-fade-up" style="--delay:300ms">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
                 LinkedIn
               </a>
-              <a href="https://github.com/johnrafaeljocson" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-green-400 transition-colors">
+              <a href="https://github.com/johnrafaeljocson" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-300 hover:text-green-400 transition-colors animate-on-scroll animate-fade-up" style="--delay:400ms">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
@@ -612,7 +740,7 @@ import { getAssetPath } from '../utils/paths.js';
               </a>
             </div>
           </div>
-          <div class="flex flex-col items-center md:items-end">
+          <div class="flex flex-col items-center md:items-end animate-on-scroll animate-fade-up" style="--delay:200ms">
             <div class="text-center md:text-right">
               <p class="text-gray-400 mb-2">© 2025 John Rafael L. Jocson</p>
               <p class="text-gray-500 text-sm">Computer Engineer | Developer | Innovator</p>
@@ -751,6 +879,61 @@ import { getAssetPath } from '../utils/paths.js';
           techContent.classList.remove('hidden');
           aboutContent.classList.add('hidden');
         });
+      }
+    });
+  </script>
+
+  <!-- Animations: Intersection Observer + Typing Effect -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ── 1. Hero on-load animations (trigger immediately) ──
+      requestAnimationFrame(() => {
+        document.querySelectorAll('.animate-on-load').forEach(el => {
+          el.classList.add('is-visible');
+        });
+      });
+
+      // ── 2. Typing effect ──
+      const target = document.getElementById('typing-target');
+      if (target) {
+        const text = target.getAttribute('data-text') || '';
+        let i = 0;
+        target.textContent = '';
+
+        function typeChar() {
+          if (i < text.length) {
+            target.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeChar, 120);
+          } else {
+            // Keep cursor blinking for a moment, then hide it
+            setTimeout(() => target.classList.add('done'), 1500);
+          }
+        }
+
+        setTimeout(typeChar, 300);
+      }
+
+      // ── 3. Scroll-triggered animations via Intersection Observer ──
+      const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+      if (scrollElements.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+          }
+        );
+
+        scrollElements.forEach(el => observer.observe(el));
       }
     });
   </script>
